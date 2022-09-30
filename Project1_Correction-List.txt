@@ -1,0 +1,17 @@
+mainpage
+- font tenggelam, kene besarkan sikit
+
+login page
+- bg bagi static
+- logo company utk bg dan bergerak agak offensive
+- lepas dh login, takpayah ada alert box, instead keluar alert message tpi at the same 
+page dengan system development page -> modal box
+
+system development page
+- gelapkan background bgi kene dengan object 
+- kene check validation bila type masuk artanis_page.php dekat url
+
+
+next project
+- 1/11
+- duplicate semua dekat artanis.com

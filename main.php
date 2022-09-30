@@ -7,24 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>ARTANIS CLOUD</title>
+    <title>ARTANIS CLOUD  WEBSITE</title>
     <style>
-    video {
-        /* position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100vh;
-        object-fit: cover;
-        min-width: 100%;
-        min-height: 100vh;
-        z-index: 1; */
-        /* position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%; */
-    }
     *{
         font-family: 'Poppins', sans-serif;
         padding: 0;
@@ -69,8 +53,9 @@
     }
     .artanis h2{
         font-size:2em;
-        font-weight:200;
+        font-weight:500;
         color:#0F3460;
+        
         padding-left:5%;
     }
     .container {
@@ -78,7 +63,7 @@
         display: flex;
         margin:auto;
         padding: 10px 30px;
-        padding-top: 3%;
+        /* padding-top: 3%; */
         /* width:25%;
         float:right; */
         /* padding:3%; */
@@ -93,6 +78,7 @@
         border: 1px  solid #0F3460;
         cursor: pointer;
         position: relative;
+        /* position:center; */
         background-color: rgba(0, 0, 0, 0);
         user-select: none;
         -webkit-user-select: none;
@@ -126,44 +112,6 @@
         }
         }
         
-        #title {
-        color:#999;
-        text-transform: uppercase;
-        font-size:36px;
-        font-weight:bold;
-        /* padding-top:200px;   */
-        /* position:fixed; */
-        width:100%;
-        bottom:45%;
-        display:block;
-        }
-
-        #flip {
-        height:50px;
-        overflow:hidden;
-        }
-
-        #flip > div > div {
-        color:#fff;
-        /* padding:4px 12px; */
-        height:45px;
-        margin-bottom:45px;
-        display:inline-block;
-        }
-
-        #flip div:first-child {
-        animation: show 5s linear infinite;
-        }
-
-        #flip div div {
-        background:#42c58a;
-        }
-        #flip div:first-child div {
-        background:#4ec7f3;
-        }
-        #flip div:last-child div {
-        background:#DC143C;
-        }
 
         @keyframes show {
         0% {margin-top:-270px;}
@@ -176,48 +124,61 @@
         100% {margin-top:-270px;}
         }
         
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+        
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+                
+        [class*="col-"] {
+        float: left;
+        padding: 15px;
+        }
+
+        li{
+            /* padding:20%; */
+            padding-right:10%;
+            padding-bottom:30px;
+        }
 
     </style>
 </head>
 <body>
-    <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="AC_logo.png">
-    <!-- <header style="padding:5%; font-size:50px; text-align:left; font-weight: 100;">
-        ARTANIS CLOUD
-    </header> -->
-    <!-- <video src="video.mp4" muted loop autoplay></video> -->
     <div class="artanis">
-        <h1 style="padding-bottom:0%;">NEVER STOP</h1>
-        <h1 style="padding-top:0%;">EXPLORING</h1>
-           
-        <!-- <div id=title>
-            <div id=flip>
-                <div><div>EXPLORING</div></div>
-                <div><div>LEARNING</div></div>
-                <div><div>ADVENTURING</div></div>
+            <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="AC_logo.png">
             </div>
-        </div> -->
-        
-        
-        <h2>Artanis Cloud is a software development company on Artificial Intelligience.</h2>
-        <div class="container">
-            <!-- <a href="https://www.artaniscloud.com/">Go to artaniscloud.com</a>
-            <a href="login.php">Go to dev.ezran.my</a>
-            <a href="https://elixirush.com/">Go to elixirush.com</a>
-            <a href="https://lootbox.my/">Go to lootbox.my</a> -->
-            <button class="button-52" onclick="window.location.href='https://www.artaniscloud.com/'">Go to artaniscloud.com</button>
-            <button class="button-52" onclick="window.location.href='login.php'">Go to dev.ezran.my</button>
-            <button class="button-52" onclick="window.location.href='https://elixirush.com/'">Go to elixirush.com</button>
-            <button class="button-52" onclick="window.location.href='https://lootbox.my/'">Go to lootbox.my</button>
+    <div class="row">
+        <div class="col-9">
+            <div class="artanis">
+            <!-- <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="AC_logo.png"> -->
+            <h1 style="padding-bottom:0%;">NEVER STOP</h1>
+            <h1 style="padding-top:0%;">EXPLORING</h1>
+            <h2>Artanis Cloud is a software development company on Artificial Intelligience.</h2>
+            </div>
         </div>
-        <!-- <div id=container>
-        Make 
-        <div id=flip>
-            <div><div>wOrK</div></div>
-            <div><div>lifeStyle</div></div>
-            <div><div>Everything</div></div>
+        <div class="col-3">
+            <div class="container">
+                <ul style="list-style-type: none;">
+                <li><button class="button-52" onclick="window.location.href='https://www.artaniscloud.com/'">Go to artaniscloud.com</button></li>
+                <li><a href="login.php"><button class="button-52">Go to dev.ezran.my</button></a></li>
+                <li><button class="button-52" onclick="window.location.href='https://elixirush.com/'">Go to elixirush.com</button></li>
+                <li><button class="button-52" onclick="window.location.href='https://lootbox.my/'">Go to lootbox.my</button></li>
+                </ul>
+            </div>
         </div>
-        AweSoMe!
-        </div> -->
     </div>
 </body>
 </html>

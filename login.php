@@ -79,39 +79,7 @@
             background-position: 10000px bottom;
         }
         }
-        /* .background{
-        width: 430px;
-        height: 520px;
-        position: absolute;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        top: 50%;
-        background-image:url("AC_logo.png");
-        background-repeat:repeat;
-        }
-        .background .shape{
-        height: 200px;
-        width: 200px;
-        position: absolute;
-        border-radius: 50%;
-        }
-        .shape:first-child{
-        background: linear-gradient(
-            #1845ad,
-            #23a2f6
-        );
-        left: -80px;
-        top: -80px;
-        }
-        .shape:last-child{
-        background: linear-gradient(
-            to right,
-            #ff512f,
-            #f09819
-        );
-        right: -30px;
-        bottom: -80px;
-        } */
+
         form{
         height: 520px;
         width: 400px;
@@ -171,6 +139,22 @@
         border-radius: 5px;
         cursor: pointer;
         }
+
+        .first .image{
+            position:center;
+            size:20px;
+            background-image: url("AC_logo.png");
+        }
+
+        img.avatar {
+        width: 40%;
+        }
+
+        .imgcontainer {
+        text-align: center;
+        }
+
+
         </style>
     </head>
     <body>
@@ -179,11 +163,13 @@
             <!-- <div class="shape"></div> -->
             <!-- <img src="AC_logo.png" style="background-repeat:repeat-x;"> -->
         <!-- </div> -->
-        <div id="animatedBackground_left"></div>
-        <div id="animatedBackground_right"></div>
+        <!-- <div id="animatedBackground_left"></div>
+        <div id="animatedBackground_right"></div> -->
         <form id="first" action=" " method="post">
-            <h3>Please Login</h3>
-
+            <!-- <div class="image"></div> -->
+            <div class="imgcontainer">
+                <img src="AC_logo.png" alt="Avatar" class="avatar">
+            </div>
             <label for="username">Username</label>
             <input type="text" placeholder="Username" name="username">
 
