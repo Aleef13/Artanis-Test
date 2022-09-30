@@ -1,7 +1,4 @@
-<?php
-  include("header.php");
-?>
-
+<?php  session_start();?>
 
 <!DOCTYPE html>
 <html>
@@ -304,16 +301,14 @@
     </head>
     <body>
     <video autoplay muted loop id="myVideo">
-    <source src="bgvid2.mp4" type="video/mp4"  >
+    <source src="bgvid2.mp4" type="video/mp4">
     </video>
-    <div class="logout"  onclick="window.location.href='logout.php'">
-        <i class="fa-solid fa-right-from-bracket fa-2x"></i>
-    </div>
-   
+    
     <?php 
         include 'config_artanis.php';
             
         $user = $_SESSION["username"];
+        $name = $_SESSION["name"];
         
         $sql = "SELECT * FROM user WHERE Username='$user'";
         $sendsql = mysqli_query($conn, $sql);
@@ -335,14 +330,18 @@
         else
                 echo "Query failed!";
         ?>
+    <div class="logout"  onclick="window.location.href='logout.php'">
+        <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+    </div>
+   
     
-    <img src='image/AC_logo.png' onclick="window.location.href='logout.php'" style="cursor:pointer;">
+    <img src='AC_logo.png'>
     
     <div class="wrapper">
         <div class="cols">
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/aces.jpg)" >
+                    <div class="front" style="background-image: url(aces.jpg)" >
                         <div class="inner">
                             <i class="fa-solid fa-code fa-5x" style="color:;"></i>
                         </div>
@@ -356,7 +355,7 @@
             </div>
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/car.jpg)" >
+                    <div class="front" style="background-image: url(car.jpg)" >
                         <div class="inner">
                             <i class="fa-brands fa-wordpress-simple fa-5x"></i>
                         </div>
@@ -370,7 +369,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container"  >
-                    <div class="front"  style="background-image: url(image/htckl.png)" >
+                    <div class="front"  style="background-image: url(htckl.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -386,7 +385,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container"  >
-                    <div class="front" style="background-image: url(image/aces.jpg)" >
+                    <div class="front" style="background-image: url(aces.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -402,7 +401,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/mpob.png)" >
+                    <div class="front" style="background-image: url(mpob.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -418,7 +417,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/unesco_ihp.png)" >
+                    <div class="front" style="background-image: url(unesco_ihp.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -434,7 +433,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/jpsm.jpg)" >
+                    <div class="front" style="background-image: url(jpsm.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -450,7 +449,7 @@
             </div>    
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/jas.jpg" >
+                    <div class="front" style="background-image: url(jas.jpg" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -466,7 +465,7 @@
             </div>
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/AC.png)" >
+                    <div class="front" style="background-image: url(AC.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -482,7 +481,7 @@
             </div>
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/upen.png)" >
+                    <div class="front" style="background-image: url(upen.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -499,7 +498,7 @@
             </div> 
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/icep.jpg)" >
+                    <div class="front" style="background-image: url(icep.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -516,7 +515,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/mpob.png)" >
+                    <div class="front" style="background-image: url(mpob.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -532,7 +531,7 @@
             </div>     
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/marketplace.jpg)" >
+                    <div class="front" style="background-image: url(marketplace.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -548,7 +547,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url(image/aces.jpg)" >
+                    <div class="front" style="background-image: url(aces.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -564,7 +563,7 @@
             </div> 
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/biupa.png)" >
+                    <div class="front" style="background-image: url(biupa.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -580,7 +579,7 @@
             </div> 
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/jpsm.jpg)" >
+                    <div class="front" style="background-image: url(jpsm.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -596,7 +595,7 @@
             </div> 
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/mcmc.png)" >
+                    <div class="front" style="background-image: url(mcmc.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -612,7 +611,7 @@
             </div>   
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/biupa.png)" >
+                    <div class="front" style="background-image: url(biupa.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -628,7 +627,7 @@
             </div>    
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/pokli.jpeg)" >
+                    <div class="front" style="background-image: url(pokli.jpeg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -644,7 +643,7 @@
             </div> 
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/htckl.png)" >
+                    <div class="front" style="background-image: url(htckl.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -660,7 +659,7 @@
             </div>   
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container" >
-                    <div class="front" style="background-image: url(image/AC.png)" >
+                    <div class="front" style="background-image: url(AC.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -676,7 +675,7 @@
             </div>   
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container"  onclick="window.location.href='https://mygdx.malaysia.gov.my/ms'">
-                    <div class="front" style="background-image: url(image/mygdx.jpg)" >
+                    <div class="front" style="background-image: url(mygdx.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -692,7 +691,7 @@
             </div> 
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container"  onclick="window.location.href='http://waris.water.gov.my/'">
-                    <div class="front" style="background-image: url(image/biupa.png)" >
+                    <div class="front" style="background-image: url(biupa.png)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->
@@ -708,7 +707,7 @@
             </div>  
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container"  onclick="window.location.href='https://ezran.my/drone/'">
-                    <div class="front" style="background-image: url(image/caam.jpg)" >
+                    <div class="front" style="background-image: url(caam.jpg)" >
                         <div class="inner">
                             <!-- <p>Diligord</p>
                             <span>Lorem ipsum</span> -->

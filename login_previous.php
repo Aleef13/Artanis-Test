@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,6 +26,58 @@
         }
         body{
         background-color: #16213E;
+        /* background-image:url("AC_logo.png");
+        background-repeat:repeat;
+        background-size:15%; */
+        /* background:20%; */
+        /* animation: animatedBackground 500s linear infinite; */
+        }
+        #animatedBackground_left {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("AC_logo.png");
+        background-repeat: repeat-x;
+        background-attachment:fixed;
+        background-position: top;
+        background-size: auto 20%;
+        /*adjust s value for speed*/
+        animation: animatedBackground_left 100s  linear infinite;
+        }
+        #animatedBackground_right{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("AC_logo.png");
+        background-repeat: repeat-x;
+        background-attachment:fixed;
+        background-position: bottom;
+        background-size: auto 20%;
+        /*adjust s value for speed*/
+        animation: animatedBackground_right 100s  linear infinite;
+        }
+
+        @keyframes animatedBackground_left {
+        from {
+            background-position: top;
+        }
+        /*use negative width if you want it to flow right to left else and positive for left to right*/
+        to {
+            background-position: -10000px  top;
+        }
+        }
+        @keyframes animatedBackground_right {
+        from {
+            background-position: bottom;
+        }
+        /*use negative width if you want it to flow right to left else and positive for left to right*/
+        to {
+            background-position: 10000px bottom;
+        }
         }
 
         form{
@@ -76,7 +128,6 @@
         ::placeholder{
         color: #e5e5e5;
         }
-
         .button{
         margin-top: 50px;
         width: 100%;
@@ -101,11 +152,17 @@
         </style>
     </head>
     <body>
-
+        <!-- <div class="background">
+            <!-- <div class="shape"></div> -->
+            <!-- <div class="shape"></div> -->
+            <!-- <img src="AC_logo.png" style="background-repeat:repeat-x;"> -->
+        <!-- </div> -->
+        <!-- <div id="animatedBackground_left"></div>
+        <div id="animatedBackground_right"></div> -->
         <form id="first" action=" " method="post">
             <!-- <div class="image"></div> -->
             <div class="imgcontainer">
-                <img src="image/AC_logo.png" alt="AC_logo" class="avatar">
+                <img src="AC_logo.png" alt="AC_logo" class="avatar">
             </div>
             <label for="username">Username</label>
             <input type="text" placeholder="Username" name="username">
@@ -116,12 +173,19 @@
             <!-- <button>Log In</button> -->
             <input type ="submit" value="Login" name="login" class="button">
         </form>
+        <!-- <form id="first" action=" " method="post">
+            <b>Username: </b><br>
+            <input type = "text" name = "username"> <br>
+            <b>Password: </b> <br>
+            <input type = "password" name = "pass" maxlength="20"> <br>
+            <input type ="submit" value="Login" name="login" id="button">
+            <br>
+            
+        </form> -->
 
         <?php
-            session_start(); /* START THE SESSION */
-
-            include("config_artanis.php");
-
+            include 'config_artanis.php';
+            
             if(isset($_POST["login"])){
                 include 'config_artanis.php';
 
@@ -129,17 +193,18 @@
                 $pass = $_POST["pass"];
                 $sqlcheck = "SELECT * FROM user WHERE Username = '$user' AND Password = '$pass'";
                 $result = mysqli_query($conn,$sqlcheck);	
-            
-            if($result == 1){ /* IF FOUND ONE */
-                $_SESSION["username"] = $user; /* STORE THE USERNAME INTO A SESSION VARIABLE */
-                header("LOCATION:artanis_page.php"); /* REDIRECT USER TO INDEX PAGE */
+                
+                if ($result) {
+                    if (mysqli_num_rows($result) > 0) {
+                        // $_SESSION["username"] = $user;
+                        // $_SESSION["name"] = $user;
+                        echo "<script>alert('Login Successful!\\nWelcome ".$user.".');location.href='artanis_page.php';</script>";
+                    }else{
+                        echo "<script>alert('Username or Password is not correct. \\nTry again');</script>";
+                    }
+                }
+                
             }
-            else { /* IF NO RESULT FOUND */
-                header("LOCATION:login.php"); /* REDIRECT USER TO LOGIN PAGE */
-            }
-            
-            } /* END OF PREPARED STATEMENT */
-            
         ?>
         
     </body>

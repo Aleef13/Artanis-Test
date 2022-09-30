@@ -158,7 +158,7 @@
 </head>
 <body>
     <div class="artanis">
-            <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="AC_logo.png">
+            <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="image\AC_logo.png">
             </div>
     <div class="row">
         <div class="col-9">
