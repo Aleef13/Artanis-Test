@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +8,14 @@
 <!-- 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+       
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -25,7 +33,12 @@
         
         }
         body{
-        background-color: #16213E;
+        /* background-color: #16213E; */
+        /* background-color: #4C6793; */
+        background-image:url("image/wave.gif");
+        background-size:100% 100%; 
+        background-attachment:fixed;
+        background-repeat:no-repeat;
         }
 
         form{
@@ -97,6 +110,49 @@
         text-align: center;
         }
 
+        .button-52 {
+        font-size: 16px;
+        font-weight: 4000;
+        letter-spacing: 1px;
+        padding: 13px 20px 13px;
+        outline: 0;
+        border: 1px  solid #0F3460;
+        cursor: pointer;
+        position: relative;
+        /* position:center; */
+        background-color: rgba(0, 0, 0, 0);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+
+        /* display: inline-block;
+        margin-left: 0;
+        margin-right: 0; */
+        }
+
+        .button-52:after {
+        content: "";
+        background-color: #31E1F7;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+        }
+
+        .button-52:hover:after {
+        top: 0px;
+        left: 0px;
+        }
+
+        @media (min-width: 768px) {
+        .button-52 {
+            padding: 13px 50px 13px;
+        }
+        }
+
 
         </style>
     </head>
@@ -117,11 +173,70 @@
             <input type ="submit" value="Login" name="login" class="button">
         </form>
 
+        <!--Modal box error-->
+        <div class="modal fade" id="modal_error"  aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Error</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Username or Password is incorrect!.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!--Modal box success-->
+        <!-- <div class="modal fade" id="modal_success"  aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Successfull</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Verification successfull.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="location.href = 'artanis_page.php';">Ok</button>
+            </div>
+            </div>
+        </div>
+        </div> -->
+
         <?php
-            session_start(); /* START THE SESSION */
+            // session_start(); /* START THE SESSION */
 
-            include("config_artanis.php");
+            // include("config_artanis.php");
 
+            // if(isset($_POST["login"])){
+            //     include 'config_artanis.php';
+
+            //     $user = $_POST["username"];
+            //     $pass = $_POST["pass"];
+            //      $sqlcheck = "SELECT * FROM user WHERE Username = '$user' AND Password = '$pass'";
+            //     $result = mysqli_query($conn,$sqlcheck);	
+            
+            // if($result){ /* IF FOUND ONE */
+            //     $_SESSION["username"] = $user; /* STORE THE USERNAME INTO A SESSION VARIABLE */
+            //     header("LOCATION:artanis_page.php"); /* REDIRECT USER TO INDEX PAGE */
+            // }
+            // else { /* IF NO RESULT FOUND */
+            //     header("LOCATION:login.php"); /* REDIRECT USER TO LOGIN PAGE */
+            // }
+            
+            // } /* END OF PREPARED STATEMENT */
+            include 'config_artanis.php';
+            
             if(isset($_POST["login"])){
                 include 'config_artanis.php';
 
@@ -129,19 +244,39 @@
                 $pass = $_POST["pass"];
                 $sqlcheck = "SELECT * FROM user WHERE Username = '$user' AND Password = '$pass'";
                 $result = mysqli_query($conn,$sqlcheck);	
-            
-            if($result == 1){ /* IF FOUND ONE */
-                $_SESSION["username"] = $user; /* STORE THE USERNAME INTO A SESSION VARIABLE */
-                header("LOCATION:artanis_page.php"); /* REDIRECT USER TO INDEX PAGE */
+                
+                if ($result) {
+                    if (mysqli_num_rows($result) > 0) {
+                        $_SESSION["username"] = $user;
+                        echo "<script>location.href='artanis_page.php';</script>";
+                        // $showModal = "";
+                        //  header("LOCATION:artanis_page.php");
+                    }else{
+                        $showModal = "true";
+                    }
+                }
+                
             }
-            else { /* IF NO RESULT FOUND */
-                header("LOCATION:login.php"); /* REDIRECT USER TO LOGIN PAGE */
-            }
-            
-            } /* END OF PREPARED STATEMENT */
+
+            if(!empty($showModal)) {
+                // CALL MODAL HERE
+                echo '<script type="text/javascript">
+                    $(document).ready(function(){
+                        $("#modal_error").modal("show");
+                    });
+                </script>';
+            } 
+            // else{
+            //     echo '<script type="text/javascript">
+            //         $(document).ready(function(){
+            //             $("#modal_success").modal("show");
+            //         });
+            //     </script>';
+            // }
             
         ?>
-        
+       
+
     </body>
 
 </html>

@@ -47,15 +47,16 @@
     
     .artanis h1{
         font-size:5em;
-        color:#0F3460;
+        /* color:#0F3460; */
+        color:#C3F8FF;
         padding-left:5%;
         padding-top:2%;
     }
     .artanis h2{
-        font-size:2em;
-        font-weight:500;
-        color:#0F3460;
-        
+        font-size:29px;
+        font-weight:400;
+        /* color:#0F3460; */
+        color:#C3F8FF;
         padding-left:5%;
     }
     .container {
@@ -156,16 +157,13 @@
 
     </style>
 </head>
-<body>
-    <div class="artanis">
-            <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="image\AC_logo.png">
-            </div>
+<body>      
+    <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="image\AC_logo.png">
     <div class="row">
         <div class="col-9">
             <div class="artanis">
             <!-- <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="AC_logo.png"> -->
-            <h1 style="padding-bottom:0%;">NEVER STOP</h1>
-            <h1 style="padding-top:0%;">EXPLORING</h1>
+            <h1 >NEVER STOP EXPLORING</h1>
             <h2>Artanis Cloud is a software development company on Artificial Intelligience.</h2>
             </div>
         </div>

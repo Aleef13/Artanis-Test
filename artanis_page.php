@@ -18,6 +18,36 @@
         <script src="https://kit.fontawesome.com/ab19273efb.js" crossorigin="anonymous"></script>
         
         <style>
+
+        body{
+        /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+        background: linear-gradient(180deg, #8bbccc, #4c6793, #5c2e7e, #000000);
+            background-size: 800% 800%;
+            background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+
+            -webkit-animation: AnimationName 57s ease infinite;
+            -moz-animation: AnimationName 57s ease infinite;
+            /* animation: AnimationName 57s ease infinite; */
+            
+        }
+
+        @-webkit-keyframes AnimationName {
+            0%{background-position:50% 0%}
+            50%{background-position:50% 100%}
+            100%{background-position:50% 0%}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background-position:50% 0%}
+            50%{background-position:50% 100%}
+            100%{background-position:50% 0%}
+        }
+        @keyframes AnimationName {
+            0%{background-position:50% 0%}
+            50%{background-position:50% 100%}
+            100%{background-position:50% 0%}
+        }
         img{
             padding-top:50px;
             padding-bottom:50px;
@@ -73,6 +103,7 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
+        /* background-image:url("imagewave.gif"); */
         }
 
         h4{
@@ -300,12 +331,14 @@
         z-index:-1;
         }
         </style>
+
+        
         
     </head>
     <body>
-    <video autoplay muted loop id="myVideo">
+    <!-- <video autoplay muted loop id="myVideo">
     <source src="bgvid2.mp4" type="video/mp4"  >
-    </video>
+    </video> -->
     <div class="logout"  onclick="window.location.href='logout.php'">
         <i class="fa-solid fa-right-from-bracket fa-2x"></i>
     </div>

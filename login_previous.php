@@ -198,7 +198,7 @@
                     if (mysqli_num_rows($result) > 0) {
                         // $_SESSION["username"] = $user;
                         // $_SESSION["name"] = $user;
-                        echo "<script>alert('Login Successful!\\nWelcome ".$user.".');location.href='artanis_page.php';</script>";
+                        // echo "<script>alert('Login Successful!\\nWelcome ".$user.".');location.href='artanis_page.php';</script>";
                     }else{
                         echo "<script>alert('Username or Password is not correct. \\nTry again');</script>";
                     }
