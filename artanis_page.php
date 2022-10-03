@@ -21,14 +21,14 @@
 
         body{
         /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-        background: linear-gradient(180deg, #8bbccc, #4c6793, #5c2e7e, #000000);
+        background: linear-gradient(1deg, #8bbccc, #4c6793, #5c2e7e, #000000);
             background-size: 800% 800%;
             background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
+        /* animation: gradient 15s ease infinite; */
         height: 100vh;
 
-            -webkit-animation: AnimationName 57s ease infinite;
-            -moz-animation: AnimationName 57s ease infinite;
+            /* -webkit-animation: AnimationName 57s ease infinite;
+            -moz-animation: AnimationName 57s ease infinite; */
             /* animation: AnimationName 57s ease infinite; */
             
         }
