@@ -15,12 +15,22 @@
         margin: 0;
         box-sizing: border-box;
     }
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        box-shadow: 0 4px 8px 0 white;
+        object-fit:cover;
+        z-index:-1;
+        }
     body{
         /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-        background: linear-gradient(-45deg, #E94560, #5F6F94, #97D2EC, #16213E);
+        /* background: linear-gradient(-45deg, #E94560, #5F6F94, #97D2EC, #16213E);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
-        height: 100vh;
+        height: 100vh; */
     }
     
     @keyframes gradient {
@@ -48,16 +58,21 @@
     .artanis h1{
         font-size:5em;
         /* color:#0F3460; */
-        color:#C3F8FF;
+        color:#edf2f4;
         padding-left:5%;
         padding-top:2%;
+        /* -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black */
     }
     .artanis h2{
         font-size:29px;
         font-weight:400;
         /* color:#0F3460; */
-        color:#C3F8FF;
+        color:#edf2f4;
         padding-left:5%;
+        /* -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black */
+        
     }
     .container {
         justify-content:center;
@@ -76,7 +91,7 @@
         letter-spacing: 1px;
         padding: 13px 20px 13px;
         outline: 0;
-        border: 1px  solid #0F3460;
+        border: 1px  solid white;
         cursor: pointer;
         position: relative;
         /* position:center; */
@@ -155,9 +170,13 @@
             padding-bottom:30px;
         }
 
+
     </style>
 </head>
-<body>      
+<body> 
+    <video autoplay muted loop id="myVideo">
+    <source src="bgvid5.mp4" type="video/mp4"  >
+    </video>     
     <img style="padding-left:5%; padding-top:3%; font-size:50px; text-align:left;" src="image\AC_logo.png">
     <div class="row">
         <div class="col-9">
@@ -177,6 +196,8 @@
                 </ul>
             </div>
         </div>
+        
     </div>
+    
 </body>
 </html>
