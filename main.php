@@ -56,9 +56,9 @@
     }
     
     .artanis h1{
-        font-size:5em;
+        font-size:6em;
         /* color:#0F3460; */
-        color:#edf2f4;
+        color: #31E1F7;
         padding-left:5%;
         padding-top:2%;
         /* -webkit-text-stroke-width: 1px;
@@ -68,7 +68,7 @@
         font-size:29px;
         font-weight:400;
         /* color:#0F3460; */
-        color:#edf2f4;
+        color:#31E1F7;
         padding-left:5%;
         /* -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: black */
